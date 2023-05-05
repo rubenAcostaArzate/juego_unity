@@ -652,6 +652,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1627378035}
   - component: {fileID: 1627378034}
+  - component: {fileID: 1627378036}
   m_Layer: 0
   m_Name: Carlita
   m_TagString: Untagged
@@ -719,10 +720,22 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1627378033}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.89, y: -0.737, z: 0}
+  m_LocalPosition: {x: 0.89, y: -0.428, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1627378036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1627378033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cab8c4cbf2e580b408faf814aef8673b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
