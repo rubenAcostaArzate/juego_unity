@@ -662,6 +662,7 @@ GameObject:
   - component: {fileID: 1627378038}
   - component: {fileID: 1627378039}
   - component: {fileID: 1627378040}
+  - component: {fileID: 1627378041}
   m_Layer: 0
   m_Name: Carlita
   m_TagString: Untagged
@@ -813,6 +814,26 @@ MonoBehaviour:
   enemigo: 0
   sprite: {fileID: 1627378034}
   deteccionSuelo: {fileID: 1351606973}
+--- !u!95 &1627378041
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1627378033}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3f65648a50dcefb468baf42c4c803ac5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &1829876794 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d0d2c2b5218bbf1f8ba0cfa29020ae67, type: 3}
