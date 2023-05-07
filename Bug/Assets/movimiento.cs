@@ -39,20 +39,20 @@ public class movimiento : MonoBehaviour
             animador.SetBool("se_mueve",true);
             _rb.velocity = new Vector3(_rb.velocity.x,velocidadSaltoInicial);
         } else if (Input.GetKey(KeyCode.A)) {
-            sprite.flipX=true;
+            sprite.flipX=false;
             animador.SetBool("se_mueve",true);
             transform.Translate(0.1f,0f,0f);
         } else if (Input.GetKey(KeyCode.D)) {
-            sprite.flipX=false;
+            sprite.flipX=true;
             animador.SetBool("se_mueve",true);
             transform.Translate(-0.1f,0f,0f);
         } else if (Input.GetKey(KeyCode.W)){
             animador.SetBool("se_mueve",true);
-            transform.Translate(0f,0f,0.1f);
+            transform.Translate(0f,0f,-0.1f);
 
         }else if (Input.GetKey(KeyCode.S)) {
             animador.SetBool("se_mueve",true);
-            transform.Translate(0f,-0f,-0.1f);
+            transform.Translate(0f,0f,0.1f);
         }
 
     }
