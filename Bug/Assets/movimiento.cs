@@ -38,6 +38,7 @@ public class movimiento : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && enSuelo) {
             animador.SetBool("se_mueve",true);
             _rb.velocity = new Vector3(_rb.velocity.x,velocidadSaltoInicial);
+            Debug.Log("Salto");
         } else if (Input.GetKey(KeyCode.A)) {
             sprite.flipX=false;
             animador.SetBool("se_mueve",true);
@@ -53,6 +54,10 @@ public class movimiento : MonoBehaviour
         }else if (Input.GetKey(KeyCode.S)) {
             animador.SetBool("se_mueve",true);
             transform.Translate(0f,0f,0.1f);
+        }else if (Input.GetKey(KeyCode.E)) {
+            Debug.Log("Activo mi escudo");
+        }else if (Input.GetKey(KeyCode.Q)) {
+            Debug.Log("Utilizo mis hormonas");
         }
 
     }
