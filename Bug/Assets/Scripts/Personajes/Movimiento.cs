@@ -39,20 +39,20 @@ public class Movimiento : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A)	) {
             GetComponent<SpriteRenderer>().flipX = true;
-	    animador.SetInteger("Movement",1);
+	        animador.SetInteger("Movement",1);
             _rb.AddForce(fuerzaHorizontal * Vector3.left);
         } 
         if (Input.GetKey(KeyCode.D)) {
             GetComponent<SpriteRenderer>().flipX = false;
-	    animador.SetInteger("Movement",1);
+	        animador.SetInteger("Movement",1);
             _rb.AddForce(fuerzaHorizontal * Vector3.right);
         }
 	if (Input.GetKey(KeyCode.W)) {
-	    animador.SetInteger("Movement",1);
+	        animador.SetInteger("Movement",1);
             _rb.AddForce(fuerzaHorizontal * Vector3.forward);
         }
 	if (Input.GetKey(KeyCode.S)) {
-	    animador.SetInteger("Movement",1);
+	        animador.SetInteger("Movement",1);
             _rb.AddForce(fuerzaHorizontal * Vector3.back);
         }
         if(_rb.velocity.x>velocidadTerminal) {
