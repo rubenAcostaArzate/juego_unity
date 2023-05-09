@@ -1,7 +1,43 @@
 fileFormatVersion: 2
-guid: 56207d1d62e8d433ba98b449a99184af
+guid: e362bc6a7c79fce4db16d145d43a5550
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 7166236263522030466
+    second: Run (32x32)_0
+  - first:
+      213: 2470319409956435798
+    second: Run (32x32)_1
+  - first:
+      213: -4540918584354326388
+    second: Run (32x32)_2
+  - first:
+      213: -4455822056875728695
+    second: Run (32x32)_3
+  - first:
+      213: -5364790588639958657
+    second: Run (32x32)_4
+  - first:
+      213: -1512656188830553638
+    second: Run (32x32)_5
+  - first:
+      213: -2754230144694611447
+    second: Run (32x32)_6
+  - first:
+      213: -2419971920513260168
+    second: Run (32x32)_7
+  - first:
+      213: 1843850012483549754
+    second: Run (32x32)_8
+  - first:
+      213: 241620830004830169
+    second: Run (32x32)_9
+  - first:
+      213: -362971539341918764
+    second: Run (32x32)_10
+  - first:
+      213: 2178398316516280758
+    second: Run (32x32)_11
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -33,12 +69,12 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 0
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -62,15 +98,15 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 0
-  cookieLightType: 0
+  applyGammaDecoding: 1
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -82,7 +118,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -94,7 +130,19 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -105,358 +153,253 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: carlitaXII_ss_0
+      name: Run (32x32)_0
       rect:
         serializedVersion: 2
-        x: 58
-        y: 698
-        width: 220
-        height: 380
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1c630d6e0dae4244a6baa66fb52f8f1
-      internalID: -1945185927
+      spriteID: 561f189b59b5f244a8b7f64ffbe3e9c2
+      internalID: 7166236263522030466
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: carlitaXII_ss_1
+      name: Run (32x32)_1
       rect:
         serializedVersion: 2
-        x: 302
-        y: 690
-        width: 416
-        height: 386
+        x: 32
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7efae3f7165a428e86e9b5785454b83
-      internalID: 441878208
+      spriteID: f24443872ca0dd5488db00fd692506e5
+      internalID: 2470319409956435798
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: carlitaXII_ss_2
+      name: Run (32x32)_2
       rect:
         serializedVersion: 2
-        x: 1325
-        y: 562
-        width: 46
-        height: 36
+        x: 64
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b817c2d63a75458cbae84ebb19c0a12
-      internalID: -1125566959
+      spriteID: c52aa507ad154bf4988ddae7c8b9b595
+      internalID: -4540918584354326388
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: carlitaXII_ss_3
+      name: Run (32x32)_3
       rect:
         serializedVersion: 2
-        x: 724
-        y: 694
-        width: 229
-        height: 379
+        x: 96
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3756df4c9c24e45f39bc927a91698e42
-      internalID: -1721189880
+      spriteID: 4307d79aa78e2af40a105edf4f7614dc
+      internalID: -4455822056875728695
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: carlitaXII_ss_4
+      name: Run (32x32)_4
       rect:
         serializedVersion: 2
-        x: 985
-        y: 701
-        width: 236
-        height: 366
+        x: 128
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df4c98bb8242b4ef4b480636b11954c8
-      internalID: -494794130
+      spriteID: 35824cb380145094885740da57794be2
+      internalID: -5364790588639958657
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: carlitaXII_ss_5
+      name: Run (32x32)_5
       rect:
         serializedVersion: 2
-        x: 1228
-        y: 707
-        width: 244
-        height: 364
+        x: 160
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b0f4c7c7babb4c51b2ca6c0b98b23f6
-      internalID: -13381400
+      spriteID: bc95bae097da4894785c4f0a0a3a8451
+      internalID: -1512656188830553638
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: carlitaXII_ss_6
+      name: Run (32x32)_6
       rect:
         serializedVersion: 2
-        x: 1480
-        y: 701
-        width: 221
-        height: 378
+        x: 192
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60af13bc0ad3747d3972d6c8b188d0e7
-      internalID: -1749119398
+      spriteID: 5b65d6cb8f479d04493a80da6d6346cb
+      internalID: -2754230144694611447
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: carlitaXII_ss_7
+      name: Run (32x32)_7
       rect:
         serializedVersion: 2
-        x: 1338
-        y: 572
-        width: 29
-        height: 18
+        x: 224
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ab1e312314774a6dae1e644e06146a7
-      internalID: 1753194108
+      spriteID: e279e5ab0014629479a55384a2b9a78c
+      internalID: -2419971920513260168
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: carlitaXII_ss_8
+      name: Run (32x32)_8
       rect:
         serializedVersion: 2
-        x: 75
-        y: 346
-        width: 206
-        height: 283
+        x: 256
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d65967b57cfd74e11856cf4389cbca4c
-      internalID: 718437523
+      spriteID: a6f70c2e02d1ffc4f892dfac0bc7497f
+      internalID: 1843850012483549754
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: carlitaXII_ss_9
+      name: Run (32x32)_9
       rect:
         serializedVersion: 2
-        x: 310
-        y: 323
-        width: 355
-        height: 337
+        x: 288
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 079db63bf0a074633a4976ecef4e74ab
-      internalID: 644712366
+      spriteID: e6f0c5769a1cb6440a09a7b8792ed416
+      internalID: 241620830004830169
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: carlitaXII_ss_10
+      name: Run (32x32)_10
       rect:
         serializedVersion: 2
-        x: 718
-        y: 301
-        width: 409
-        height: 381
+        x: 320
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 56c598d5fbc4c4dcd9f43250a5a389aa
-      internalID: -1149843323
+      spriteID: 5de5a7ff6a0d7864db227c9a94bf44a5
+      internalID: -362971539341918764
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: carlitaXII_ss_11
+      name: Run (32x32)_11
       rect:
         serializedVersion: 2
-        x: 1328
-        y: 567
-        width: 17
-        height: 26
+        x: 352
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f69f5fac7bbf44d2eb7c16bca0beeecc
-      internalID: -1614220552
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: carlitaXII_ss_12
-      rect:
-        serializedVersion: 2
-        x: 55
-        y: 5
-        width: 231
-        height: 308
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 120a0008817014a41a8af2b9e470978f
-      internalID: -630193634
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: carlitaXII_ss_13
-      rect:
-        serializedVersion: 2
-        x: 306
-        y: 6
-        width: 301
-        height: 262
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 952912fb992264f8f96f87a929e56c16
-      internalID: -1011332667
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: carlitaXII_ss_14
-      rect:
-        serializedVersion: 2
-        x: 612
-        y: 10
-        width: 301
-        height: 272
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8eafa2f2c143340fda5990051a90d74b
-      internalID: 1946836852
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: carlitaXII_ss_15
-      rect:
-        serializedVersion: 2
-        x: 943
-        y: 9
-        width: 306
-        height: 277
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9f8c00c33deca4d59a32aef38640f041
-      internalID: -1800973565
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: carlitaXII_ss_16
-      rect:
-        serializedVersion: 2
-        x: 1272
-        y: 14
-        width: 417
-        height: 333
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8c709a39a694f44d0a675fcd6a22fa93
-      internalID: 1624910100
+      spriteID: 98bc095274f290040ae47186d271ba24
+      internalID: 2178398316516280758
       vertices: []
       indices: 
       edges: []
@@ -464,7 +407,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 9a5626e0ce5e04bd581594b51b970b46
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -472,23 +415,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      carlitaXII_ss_10: -1149843323
-      carlitaXII_ss_3: -1721189880
-      carlitaXII_ss_4: -494794130
-      carlitaXII_ss_16: 1624910100
-      carlitaXII_ss_0: -1945185927
-      carlitaXII_ss_7: 1753194108
-      carlitaXII_ss_6: -1749119398
-      carlitaXII_ss_8: 718437523
-      carlitaXII_ss_14: 1946836852
-      carlitaXII_ss_12: -630193634
-      carlitaXII_ss_2: -1125566959
-      carlitaXII_ss_11: -1614220552
-      carlitaXII_ss_13: -1011332667
-      carlitaXII_ss_5: -13381400
-      carlitaXII_ss_1: 441878208
-      carlitaXII_ss_15: -1800973565
-      carlitaXII_ss_9: 644712366
+      Run (32x32)_9: 241620830004830169
+      Run (32x32)_5: -1512656188830553638
+      Run (32x32)_11: 2178398316516280758
+      Run (32x32)_6: -2754230144694611447
+      Run (32x32)_3: -4455822056875728695
+      Run (32x32)_7: -2419971920513260168
+      Run (32x32)_1: 2470319409956435798
+      Run (32x32)_0: 7166236263522030466
+      Run (32x32)_2: -4540918584354326388
+      Run (32x32)_4: -5364790588639958657
+      Run (32x32)_10: -362971539341918764
+      Run (32x32)_8: 1843850012483549754
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
