@@ -52,6 +52,7 @@ public class Jugador : MonoBehaviour
     void Update() {
 
         animador.SetBool("se_mueve",false);
+        animador.SetBool("escudo", false);
         animador.SetBool("en_piso",enPiso);
 
         if (Input.GetKeyDown(KeyCode.Space)) {
@@ -76,9 +77,10 @@ public class Jugador : MonoBehaviour
             transform.Translate(0f,0f,-0.1f * velocidadHorizontal);
 
         }else if (Input.GetKey(KeyCode.E)) {
-            Debug.Log("Activo mi escudo");
+            animador.SetBool("escudo",true);
 
         }else if (Input.GetKey(KeyCode.Q)) {
+            animador.SetBool("hormonas", true);
             Debug.Log("Utilizo mis hormonas");
         }
 

@@ -1210,7 +1210,7 @@ MonoBehaviour:
   velocidadHorizontal: 1
   enPiso: 0
   enemigo: 0
-  saltoMax: 1
+  saltoMax: 2
   saltoActual: 0
 --- !u!4 &1350594046
 Transform:
