@@ -22,8 +22,6 @@ public class Jugador : MonoBehaviour
 
     private Animator animador;
 
-    public GameObject sprite;
-
     public float velocidadSaltoInicial = 500;
 
     public float velocidadHorizontal = 1;
@@ -32,9 +30,9 @@ public class Jugador : MonoBehaviour
 
     public bool enemigo=true;
 
-    //public SpriteRenderer sprite;
+    private GameObject spriteCarlita;
 
-    //public Transform deteccionSuelo;
+    private SpriteRenderer sprite;
 
     public int saltoMax = 1;
     
@@ -45,7 +43,9 @@ public class Jugador : MonoBehaviour
     // Start is called before the first frame update
     void Start() {
         _rb = GetComponent<Rigidbody>();
-        animador=sprite.GetComponent<Animator>();
+        spriteCarlita = this.gameObject.transform.GetChild(0).gameObject;
+        animador = spriteCarlita.GetComponent<Animator>();
+        sprite = spriteCarlita.GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -58,12 +58,12 @@ public class Jugador : MonoBehaviour
             Saltar();
 
         } else if (Input.GetKey(KeyCode.A)) {
-            //sprite.SpriteRenderer.flipX=false;
+            sprite.flipX=true;
             animador.SetBool("se_mueve",true);
             transform.Translate(-0.1f * velocidadHorizontal,0f,0f);
 
         } else if (Input.GetKey(KeyCode.D)) {
-            //sprite.SpriteRenderer.flipX=true;
+            sprite.flipX=false;
             animador.SetBool("se_mueve",true);
             transform.Translate(0.1f * velocidadHorizontal,0f,0f);
 
