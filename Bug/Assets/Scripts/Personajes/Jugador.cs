@@ -87,6 +87,9 @@ public class Jugador : MonoBehaviour
     public void Saltar()
     {
         if (saltoActual < saltoMax ){
+            if (saltoActual == 1){
+                animador.SetBool("segundo_salto",true);
+            }
             _rb.AddForce(Vector3.up * velocidadSaltoInicial);
             enPiso = false;
             saltoActual += 1;
@@ -97,6 +100,7 @@ public class Jugador : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         enPiso = true;
-        saltoActual = 0; 
+        saltoActual = 0;
+        animador.SetBool("segundo_salto",false); 
     }
 }
