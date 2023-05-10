@@ -28,13 +28,13 @@ public class Jugador : MonoBehaviour
 
     public float velocidadHorizontal = 1;
 
-    public bool enSuelo = false;
+    public bool enPiso = false;
 
     public bool enemigo=true;
 
     //public SpriteRenderer sprite;
 
-    public Transform deteccionSuelo;
+    //public Transform deteccionSuelo;
 
     public int saltoMax = 1;
     
@@ -52,15 +52,9 @@ public class Jugador : MonoBehaviour
     void Update() {
 
         animador.SetBool("se_mueve",false);
-
-        if(Physics.SphereCast(deteccionSuelo.position, 0.1f, Vector3.down, out hit)) {
-            enSuelo = true;
-            saltoActual = 1;
-            animador.SetBool("en_piso",true);
-        }
+        animador.SetBool("en_piso",enPiso);
 
         if (Input.GetKeyDown(KeyCode.Space)) {
-            animador.SetBool("se_mueve",true);
             Saltar();
 
         } else if (Input.GetKey(KeyCode.A)) {
@@ -94,10 +88,15 @@ public class Jugador : MonoBehaviour
     {
         if (saltoActual < saltoMax ){
             _rb.AddForce(Vector3.up * velocidadSaltoInicial);
-            enSuelo = false;
-            animador.SetBool("en_piso",false);
+            enPiso = false;
             saltoActual += 1;
         }
         
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        enPiso = true;
+        saltoActual = 0; 
     }
 }

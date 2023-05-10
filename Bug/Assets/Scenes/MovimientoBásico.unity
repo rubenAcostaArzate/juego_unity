@@ -313,14 +313,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 110495198}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a5990a29610744db097826fff9a13263, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enSuelo: 1
   velocidadSaltoInicial: 500
-  deteccionSuelo: {fileID: 1156806870}
+  deteccionSuelo: {fileID: 2143757544}
 --- !u!54 &170240880
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1185,6 +1185,7 @@ GameObject:
   - component: {fileID: 1350594044}
   - component: {fileID: 1350594049}
   - component: {fileID: 1350594047}
+  - component: {fileID: 1350594050}
   m_Layer: 0
   m_Name: CarlitaPerspectiva
   m_TagString: Untagged
@@ -1206,11 +1207,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camaraObjetivo: {fileID: 745977947}
   sprite: {fileID: 2072681211}
-  velocidadSaltoInicial: 500
+  velocidadSaltoInicial: 300
   velocidadHorizontal: 1
-  enSuelo: 0
+  enPiso: 0
   enemigo: 0
-  deteccionSuelo: {fileID: 2143757544}
   saltoMax: 1
   saltoActual: 0
 --- !u!4 &1350594046
@@ -1259,6 +1259,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.6423829, y: 3.3427794, z: 1.2557411}
   m_Center: {x: 0.34516233, y: 0.48960525, z: 0.01819484}
+--- !u!65 &1350594050
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350594042}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5339625, y: 0.28431812, z: 1.09803}
+  m_Center: {x: 0.33928293, y: -1.0850996, z: 0.018298302}
 --- !u!1 &1395184813
 GameObject:
   m_ObjectHideFlags: 0
@@ -1489,9 +1502,8 @@ MonoBehaviour:
   sprite: {fileID: 1627378034}
   velocidadSaltoInicial: 500
   velocidadHorizontal: 1
-  enSuelo: 1
+  enPiso: 0
   enemigo: 0
-  deteccionSuelo: {fileID: 0}
   saltoMax: 1
   saltoActual: 1
 --- !u!1 &1659039887
