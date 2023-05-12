@@ -5,20 +5,18 @@ using UnityEngine;
 public class Jugador : MonoBehaviour
 {
     private Rigidbody _rb;
-
-    public Camera camaraObjetivo;
     
-    private int Vida;
+    private int Vida = 3;
 
     private int Olor;
 
-    private bool EscudoDisponible;
+    private bool EscudoDisponible = false;
 
-    private bool LlamadoDisponible;
+    private bool LlamadoDisponible = false;
 
-    private bool DobleSaltoDisponible;
+    private bool DobleSaltoDisponible = true;
 
-    private bool HormonasDisponible;
+    private bool HormonasDisponible = false;
 
     private Animator animador;
 
@@ -37,8 +35,6 @@ public class Jugador : MonoBehaviour
     public int saltoMax = 1;
     
     public int saltoActual = 0;
-
-    RaycastHit hit;
 
     // Start is called before the first frame update
     void Start() {
@@ -84,6 +80,13 @@ public class Jugador : MonoBehaviour
             Debug.Log("Utilizo mis hormonas");
         }
 
+        if(DobleSaltoDisponible == true){
+            saltoMax = 2;
+        }
+    }
+
+    public int getVida(){
+        return Vida;
     }
 
     public void Saltar()
@@ -97,6 +100,16 @@ public class Jugador : MonoBehaviour
             saltoActual += 1;
         }
         
+    }
+
+    public void RecibirDaño(int dano)
+    {
+        Vida = Vida - dano;
+        if (Vida <= 3){
+            Debug.Log("Moriste");
+        }else{
+            Debug.Log("Tu vida es:" + Vida);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
