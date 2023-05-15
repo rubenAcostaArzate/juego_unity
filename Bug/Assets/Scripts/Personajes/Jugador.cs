@@ -6,7 +6,7 @@ public class Jugador : MonoBehaviour
 {
     private Rigidbody _rb;
     
-    private int Vida = 3;
+    public int Vida = 3;
 
     private int Olor;
 
