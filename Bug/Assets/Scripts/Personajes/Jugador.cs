@@ -50,6 +50,8 @@ public class Jugador : MonoBehaviour
         animador.SetBool("se_mueve",false);
         animador.SetBool("escudo", false);
         animador.SetBool("en_piso",enPiso);
+        animador.SetBool("hormonas",false);
+        animador.SetBool("llamada",false);
 
         if (Input.GetKeyDown(KeyCode.Space)) {
             Saltar();
@@ -77,8 +79,12 @@ public class Jugador : MonoBehaviour
 
         }else if (Input.GetKey(KeyCode.Q)) {
             animador.SetBool("hormonas", true);
-            Debug.Log("Utilizo mis hormonas");
+
+        }else if (Input.GetKey(KeyCode.R)) {
+            animador.SetBool("llamada", true);
+
         }
+
 
         if(DobleSaltoDisponible == true){
             saltoMax = 2;
