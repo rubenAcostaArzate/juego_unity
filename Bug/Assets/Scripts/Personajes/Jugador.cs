@@ -124,4 +124,11 @@ public class Jugador : MonoBehaviour
         saltoActual = 0;
         animador.SetBool("segundo_salto",false); 
     }
+
+    private void OnCollisionEnter(Collision col){
+        if(col.gameObject.CompareTag("agua")){
+            Vida=0;
+            sprite.enabled=false;
+        }
+    }
 }
