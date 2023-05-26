@@ -15,9 +15,10 @@ public class Rana : Enemigos
     // Update is called once per frame
     void Update()
     {
+
         animador.SetBool("saltando",!enPiso);
         animador.SetBool("Corriendo",false);
-        animador.SetBool("golpeado",false);
+        //animador.SetBool("golpeado",false);
 
 
         if (Input.GetKey(KeyCode.G)) {
@@ -59,14 +60,12 @@ public class Rana : Enemigos
 
     }
 
-
-
-    private void OnCollisionEnter(Collision col)
+      private void OnCollisionEnter(Collision col)
     {
        if(col.gameObject.CompareTag("terreno")){
         enPiso = true;
         saltoActual = 0;
-        animador.SetBool("segundo_salto",false);
+
        }
 
        if(col.gameObject.CompareTag("Player")){
@@ -74,6 +73,8 @@ public class Rana : Enemigos
         animador.SetBool("golpeado",true);
        }
     }
+
+
 
 
 }

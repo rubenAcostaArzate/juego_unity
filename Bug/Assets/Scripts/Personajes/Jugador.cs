@@ -53,6 +53,10 @@ public class Jugador : MonoBehaviour
         animador.SetBool("hormonas",false);
         animador.SetBool("llamada",false);
 
+        if(Vida==0){
+          sprite.enabled=false;
+        }
+
         if (Input.GetKeyDown(KeyCode.Space)) {
             Saltar();
 
@@ -128,7 +132,13 @@ public class Jugador : MonoBehaviour
     private void OnCollisionEnter(Collision col){
         if(col.gameObject.CompareTag("agua")){
             Vida=0;
-            sprite.enabled=false;
+            //sprite.enabled=false;
         }
+
+        if(col.gameObject.CompareTag("enemigo")){
+           Vida-=1;
+        }
+
+
     }
 }
