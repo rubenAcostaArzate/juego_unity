@@ -105,7 +105,7 @@ public class Jugador : MonoBehaviour
             enPiso = false;
             saltoActual += 1;
         }
-        
+
     }
 
     public void RecibirDaño(int dano)

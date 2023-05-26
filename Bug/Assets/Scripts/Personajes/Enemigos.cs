@@ -14,7 +14,13 @@ public abstract class Enemigos : MonoBehaviour
 
     public SpriteRenderer sprite;
 
+    public Rigidbody _rb;
 
+    public int saltoMax = 1;
+
+    public int saltoActual = 0;
+
+    public bool enPiso = false;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +38,13 @@ public abstract class Enemigos : MonoBehaviour
     void Movimiento()
     {
 
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        enPiso = true;
+        saltoActual = 0;
 
     }
 

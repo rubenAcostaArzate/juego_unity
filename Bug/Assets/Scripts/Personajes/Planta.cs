@@ -13,10 +13,20 @@ public class Planta : Enemigos
     // Update is called once per frame
     void Update()
     {
-        
+       //animador.SetBool("atacando",false);
+      animador.SetBool("atacando",false);
+      if(Input.GetKey(KeyCode.M)){
+          animador.SetBool("atacando",true);
+       }
     }
 
      public override void Atacar(){
         Debug.Log("pum, le pego");
+    }
+
+    private void OnCollisionEnter(Collision col){
+        if(col.gameObject.CompareTag("Player")){
+            animador.SetBool("golpeada",true);
+        }
     }
 }

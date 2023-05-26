@@ -15,6 +15,9 @@ public class Abeja : Enemigos
     // Update is called once per frame
     void Update()
     {
+      animador.SetBool("atacando",false);
+      animador.SetBool("golpeada",false);
+
       if (Input.GetKey(KeyCode.G)) {
             sprite.flipX=true;
 
@@ -33,11 +36,19 @@ public class Abeja : Enemigos
 
             transform.Translate(0f,0f,-0.05f * velocidadHorizontal);
 
+       }else if(Input.GetKey(KeyCode.M)){
+          animador.SetBool("atacando",true);
        }
     }
 
     public override void Atacar(){
         Debug.Log("pum, le pego");
+    }
+
+    private void OnCollisionEnter(Collision col){
+        if(col.gameObject.CompareTag("Player")){
+            animador.SetBool("golpeada",true);
+        }
     }
 
 }

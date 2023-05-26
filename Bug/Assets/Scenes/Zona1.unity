@@ -412,6 +412,10 @@ MonoBehaviour:
   velocidadSaltoInicial: 500
   velocidadHorizontal: 1
   sprite: {fileID: 433021836}
+  _rb: {fileID: 433021840}
+  saltoMax: 1
+  saltoActual: 0
+  enPiso: 0
 --- !u!65 &433021839
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -568,7 +572,7 @@ GameObject:
   - component: {fileID: 1216560762}
   m_Layer: 0
   m_Name: Terrain
-  m_TagString: Untagged
+  m_TagString: terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -669,6 +673,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1945185927, guid: 56207d1d62e8d433ba98b449a99184af, type: 3}
+    - target: {fileID: 2419551964711419629, guid: 43036498965bf4608a46e8ea982d8689, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 2419551965163948520, guid: 43036498965bf4608a46e8ea982d8689, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -714,12 +722,28 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2419551965163948522, guid: 43036498965bf4608a46e8ea982d8689, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2419551965163948522, guid: 43036498965bf4608a46e8ea982d8689, type: 3}
       propertyPath: velocidadHorizontal
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2419551965163948524, guid: 43036498965bf4608a46e8ea982d8689, type: 3}
       propertyPath: m_Name
       value: CarlitaPerspectiva
+      objectReference: {fileID: 0}
+    - target: {fileID: 2419551965163948564, guid: 43036498965bf4608a46e8ea982d8689, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2419551965163948564, guid: 43036498965bf4608a46e8ea982d8689, type: 3}
+      propertyPath: m_Center.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2419551965163948567, guid: 43036498965bf4608a46e8ea982d8689, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43036498965bf4608a46e8ea982d8689, type: 3}
@@ -888,6 +912,10 @@ MonoBehaviour:
   velocidadSaltoInicial: 500
   velocidadHorizontal: 1
   sprite: {fileID: 1315987202}
+  _rb: {fileID: 1315987205}
+  saltoMax: 1
+  saltoActual: 0
+  enPiso: 0
 --- !u!65 &1315987208
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -915,6 +943,7 @@ GameObject:
   - component: {fileID: 1597726103}
   - component: {fileID: 1597726105}
   - component: {fileID: 1597726106}
+  - component: {fileID: 1597726107}
   m_Layer: 0
   m_Name: rana
   m_TagString: Untagged
@@ -982,7 +1011,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1597726100}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.7315, y: 0.363, z: -0.006}
+  m_LocalPosition: {x: 0.76, y: 0.52, z: -0.006}
   m_LocalScale: {x: 2.352563, y: 2.0803802, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1036,7 +1065,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.31, y: 0.32, z: 0.2}
+  m_Size: {x: 0.32, y: 0.32, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1597726106
 MonoBehaviour:
@@ -1051,9 +1080,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animador: {fileID: 1597726104}
-  velocidadSaltoInicial: 500
+  velocidadSaltoInicial: 300
   velocidadHorizontal: 1
   sprite: {fileID: 1597726101}
+  _rb: {fileID: 1597726103}
+  saltoMax: 1
+  saltoActual: 0
+  enPiso: 0
+--- !u!65 &1597726107
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1597726100}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 0, z: 0.2}
+  m_Center: {x: 0, y: -0.5, z: 0}
 --- !u!114 &1600222061 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2762201906055552734, guid: 13645c68bb4d64a1991cc2f005207a53, type: 3}
@@ -1085,6 +1131,51 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
+--- !u!65 &1691746242
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1691746234}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 1.642, y: 0.284, z: 1.098}
+  m_Center: {x: 0.345, y: -1.085, z: 0.018}
+--- !u!65 &1691746243
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1691746234}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 1.642, y: 3.342, z: 1.255}
+  m_Center: {x: 0.345, y: 0.489, z: 0.018}
+--- !u!114 &1691746244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1691746234}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3f2ac41cc0824a4cbafb7230184dc50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vida: 3
+  velocidadSaltoInicial: 500
+  velocidadHorizontal: 1
+  enPiso: 0
+  enemigo: 1
+  saltoMax: 2
+  saltoActual: 0
 --- !u!1 &1805291249
 GameObject:
   m_ObjectHideFlags: 0

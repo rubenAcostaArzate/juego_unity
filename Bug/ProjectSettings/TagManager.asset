@@ -6,6 +6,7 @@ TagManager:
   tags:
   - agua
   - enemigo
+  - terreno
   layers:
   - Default
   - TransparentFX
