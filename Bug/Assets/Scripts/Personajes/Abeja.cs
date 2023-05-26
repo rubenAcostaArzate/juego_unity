@@ -15,7 +15,7 @@ public class Abeja : Enemigos
     // Update is called once per frame
     void Update()
     {
-      animador.SetBool("atacando",false);
+      //animador.SetBool("atacando",false);
       animador.SetBool("golpeada",false);
 
       if (Input.GetKey(KeyCode.G)) {
