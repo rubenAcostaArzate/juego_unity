@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Escorpion : Enemigos
+public class Planta : Enemigos
 {
     // Start is called before the first frame update
     void Start()
@@ -16,7 +16,7 @@ public class Escorpion : Enemigos
         
     }
 
-    public override void Atacar(){
-        Debug.Log("me quiero morir");
+     public override void Atacar(){
+        Debug.Log("pum, le pego");
     }
 }
