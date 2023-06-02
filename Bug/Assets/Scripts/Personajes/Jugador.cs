@@ -19,6 +19,8 @@ public class Jugador : MonoBehaviour
 
     private bool HormonasDisponible = false;
 
+    private bool Nivel1_Comp=false;
+
     private Animator animador;
 
     public float velocidadSaltoInicial = 500;
@@ -118,6 +120,7 @@ public class Jugador : MonoBehaviour
 
     public void Saltar()
     {
+     if(DobleSaltoDisponible){
         if (saltoActual < saltoMax ){
             if (saltoActual == 1){
                 animador.SetBool("segundo_salto",true);
@@ -126,6 +129,13 @@ public class Jugador : MonoBehaviour
             enPiso = false;
             saltoActual += 1;
         }
+     }else{
+       if (saltoActual < 1){
+          _rb.AddForce(Vector3.up * velocidadSaltoInicial);
+           enPiso = false;
+           saltoActual += 1;
+       }
+     }
 
     }
 
@@ -146,6 +156,7 @@ public class Jugador : MonoBehaviour
 
         if(col.gameObject.CompareTag("volar")){
             DobleSaltoDisponible=true;
+            SceneManager.LoadScene("Zona2.5");
         }
 
         if(col.gameObject.CompareTag("enemigo")){
