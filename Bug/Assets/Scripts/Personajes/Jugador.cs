@@ -15,7 +15,7 @@ public class Jugador : MonoBehaviour
 
     private bool LlamadoDisponible = false;
 
-    private bool DobleSaltoDisponible = true;
+    private bool DobleSaltoDisponible = false;
 
     private bool HormonasDisponible = false;
 
@@ -100,6 +100,22 @@ public class Jugador : MonoBehaviour
         return Vida;
     }
 
+    public bool getEscudo(){
+      return EscudoDisponible;
+    }
+
+    public bool getLlamada(){
+      return LlamadoDisponible;
+    }
+
+    public bool getDobleSalto(){
+      return DobleSaltoDisponible;
+    }
+
+    public bool getHormonas(){
+      return HormonasDisponible;
+    }
+
     public void Saltar()
     {
         if (saltoActual < saltoMax ){
@@ -118,12 +134,18 @@ public class Jugador : MonoBehaviour
         enPiso = true;
         saltoActual = 0;
         animador.SetBool("segundo_salto",false); 
+
+
     }
 
     private void OnCollisionEnter(Collision col){
         if(col.gameObject.CompareTag("agua")){
             Vida=0;
             //sprite.enabled=false;
+        }
+
+        if(col.gameObject.CompareTag("volar")){
+            DobleSaltoDisponible=true;
         }
 
         if(col.gameObject.CompareTag("enemigo")){
