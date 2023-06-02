@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Jugador : MonoBehaviour
 {
@@ -54,7 +55,7 @@ public class Jugador : MonoBehaviour
         animador.SetBool("llamada",false);
 
         if(Vida==0){
-          sprite.enabled=false;
+          SceneManager.LoadScene("GameOver");
         }
 
         if (Input.GetKeyDown(KeyCode.Space)) {
@@ -110,16 +111,6 @@ public class Jugador : MonoBehaviour
             saltoActual += 1;
         }
 
-    }
-
-    public void RecibirDaño(int dano)
-    {
-        Vida = Vida - dano;
-        if (Vida <= 3){
-            Debug.Log("Moriste");
-        }else{
-            Debug.Log("Tu vida es:" + Vida);
-        }
     }
 
     private void OnTriggerEnter(Collider other)
