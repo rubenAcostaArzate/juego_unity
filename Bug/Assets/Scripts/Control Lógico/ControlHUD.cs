@@ -15,6 +15,7 @@ public class ControlHUD : MonoBehaviour
     public Image Habilidad2;
     public Image Habilidad3;
     public Image Escudo;
+    public RawImage Barra_escudo;
 
     // Start is called before the first frame update
     void Start()
@@ -51,9 +52,11 @@ public class ControlHUD : MonoBehaviour
 
         if(carlita.getEscudo()==false){
           Escudo.enabled=false;
+          Barra_escudo.enabled=false;
         }
 
         Habilidad3.enabled=carlita.getDobleSalto();
+
 
 
     }

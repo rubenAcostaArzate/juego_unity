@@ -15,7 +15,7 @@ public class Jugador : MonoBehaviour
 
     private bool LlamadoDisponible = false;
 
-    private bool DobleSaltoDisponible = false;
+    public bool DobleSaltoDisponible = false;
 
     private bool HormonasDisponible = false;
 
@@ -151,7 +151,7 @@ public class Jugador : MonoBehaviour
     private void OnCollisionEnter(Collision col){
         if(col.gameObject.CompareTag("agua")){
             Vida=0;
-            //sprite.enabled=false;
+            sprite.enabled=false;
         }
 
         if(col.gameObject.CompareTag("volar")){
