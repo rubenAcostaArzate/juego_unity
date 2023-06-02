@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414726, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.1273233, g: 0.13415198, b: 0.12107962, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -379,8 +379,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 424, y: 152}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 280.01697, y: 157.47845}
+  m_SizeDelta: {x: 122.7743, y: 33.2707}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &531980282
 MonoBehaviour:
@@ -619,7 +619,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 837383432}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -105}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -628,8 +628,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.00030518}
-  m_SizeDelta: {x: 1920, y: 1080}
+  m_AnchoredPosition: {x: -143.4013, y: -37}
+  m_SizeDelta: {x: 1633.1973, y: 859.271}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &837383434
 MonoBehaviour:
@@ -706,8 +706,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -412, y: 152}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -274, y: 164}
+  m_SizeDelta: {x: 142.12, y: 28.4416}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1255348020
 MonoBehaviour:
@@ -1041,8 +1041,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -421}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 6, y: -123.15344}
+  m_SizeDelta: {x: 73.7522, y: 67.9976}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1795287213
 MonoBehaviour:
