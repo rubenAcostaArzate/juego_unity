@@ -349,11 +349,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2419551965163948520, guid: 43036498965bf4608a46e8ea982d8689, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.402
+      value: 9.93
       objectReference: {fileID: 0}
     - target: {fileID: 2419551965163948520, guid: 43036498965bf4608a46e8ea982d8689, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.76
+      value: 1.27
       objectReference: {fileID: 0}
     - target: {fileID: 2419551965163948520, guid: 43036498965bf4608a46e8ea982d8689, type: 3}
       propertyPath: m_LocalPosition.z
@@ -416,6 +416,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: ffc35a7235e66ed46ace4bc2f2bc447d, type: 3}
     - target: {fileID: 2419551965163948522, guid: 43036498965bf4608a46e8ea982d8689, type: 3}
+      propertyPath: audiohabilidad
+      value: 
+      objectReference: {fileID: 8300000, guid: 87ca2308ca5eb0bc48e1b39b763c832f, type: 3}
+    - target: {fileID: 2419551965163948522, guid: 43036498965bf4608a46e8ea982d8689, type: 3}
       propertyPath: velocidadHorizontal
       value: 0.5
       objectReference: {fileID: 0}
@@ -433,7 +437,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2419551965163948564, guid: 43036498965bf4608a46e8ea982d8689, type: 3}
       propertyPath: m_Size.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2419551965163948564, guid: 43036498965bf4608a46e8ea982d8689, type: 3}
       propertyPath: m_Size.z
@@ -481,7 +485,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2419551965163948567, guid: 43036498965bf4608a46e8ea982d8689, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43036498965bf4608a46e8ea982d8689, type: 3}
@@ -517,6 +521,7 @@ MonoBehaviour:
   saltoActual: 0
   audiosalto: {fileID: 0}
   audiomuerte: {fileID: 0}
+  audiohabilidad: {fileID: 0}
 --- !u!114 &446112882
 MonoBehaviour:
   m_ObjectHideFlags: 0

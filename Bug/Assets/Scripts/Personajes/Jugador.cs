@@ -43,6 +43,8 @@ public class Jugador : MonoBehaviour
 
     public AudioClip audiomuerte;
 
+    public AudioClip audiohabilidad;
+
 
     // Start is called before the first frame update
     void Start() {
@@ -165,7 +167,14 @@ public class Jugador : MonoBehaviour
 
         if(col.gameObject.CompareTag("volar")){
             DobleSaltoDisponible=true;
+            AudioSource.PlayClipAtPoint(audiohabilidad,transform.position);
             SceneManager.LoadScene("Zona2.5");
+        }
+
+        if(col.gameObject.CompareTag("escudo")){
+            EscudoDisponible=true;
+            AudioSource.PlayClipAtPoint(audiohabilidad,transform.position);
+            SceneManager.LoadScene("Lo lograste");
         }
 
         if(col.gameObject.CompareTag("enemigo")){
@@ -180,8 +189,8 @@ public class Jugador : MonoBehaviour
 
     private void Muerte(){
       Vida=0;
-      AudioSource.PlayClipAtPoint(audiomuerte,transform.position);
+      //AudioSource.PlayClipAtPoint(audiomuerte,transform.position);
       sprite.enabled=false;
-      //SceneManager.LoadScene("GameOver");
+      SceneManager.LoadScene("GameOver");
     }
 }

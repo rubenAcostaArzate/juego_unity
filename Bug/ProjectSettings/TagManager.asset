@@ -8,6 +8,7 @@ TagManager:
   - enemigo
   - terreno
   - volar
+  - escudo
   layers:
   - Default
   - TransparentFX
