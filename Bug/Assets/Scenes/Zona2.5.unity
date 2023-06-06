@@ -1317,6 +1317,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2419551965163948522, guid: 43036498965bf4608a46e8ea982d8689, type: 3}
+      propertyPath: audiosalto
+      value: 
+      objectReference: {fileID: 8300000, guid: 7ffea66051f446547a716303e3e247a9, type: 3}
+    - target: {fileID: 2419551965163948522, guid: 43036498965bf4608a46e8ea982d8689, type: 3}
       propertyPath: velocidadHorizontal
       value: 0.5
       objectReference: {fileID: 0}
@@ -2104,6 +2108,7 @@ MonoBehaviour:
   enemigo: 1
   saltoMax: 2
   saltoActual: 0
+  audiosalto: {fileID: 0}
 --- !u!114 &1761830692 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2762201907068567878, guid: 13645c68bb4d64a1991cc2f005207a53, type: 3}

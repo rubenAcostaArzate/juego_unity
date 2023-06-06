@@ -39,6 +39,11 @@ public class Jugador : MonoBehaviour
     
     public int saltoActual = 0;
 
+    public AudioClip audiosalto;
+
+    public AudioClip audiomuerte;
+
+
     // Start is called before the first frame update
     void Start() {
         _rb = GetComponent<Rigidbody>();
@@ -57,10 +62,13 @@ public class Jugador : MonoBehaviour
         animador.SetBool("llamada",false);
 
         if(Vida==0){
-          SceneManager.LoadScene("GameOver");
+
+
         }
 
         if (Input.GetKeyDown(KeyCode.Space)) {
+
+            //fuenteAudio.PlayOneShot(audiosalto);
             Saltar();
 
         } else if (Input.GetKey(KeyCode.A)) {
@@ -125,12 +133,14 @@ public class Jugador : MonoBehaviour
             if (saltoActual == 1){
                 animador.SetBool("segundo_salto",true);
             }
+            AudioSource.PlayClipAtPoint(audiosalto,transform.position);
             _rb.AddForce(Vector3.up * velocidadSaltoInicial);
             enPiso = false;
             saltoActual += 1;
         }
      }else{
        if (saltoActual < 1){
+           AudioSource.PlayClipAtPoint(audiosalto,transform.position);
           _rb.AddForce(Vector3.up * velocidadSaltoInicial);
            enPiso = false;
            saltoActual += 1;
@@ -150,8 +160,7 @@ public class Jugador : MonoBehaviour
 
     private void OnCollisionEnter(Collision col){
         if(col.gameObject.CompareTag("agua")){
-            Vida=0;
-            sprite.enabled=false;
+            Muerte();
         }
 
         if(col.gameObject.CompareTag("volar")){
@@ -161,8 +170,18 @@ public class Jugador : MonoBehaviour
 
         if(col.gameObject.CompareTag("enemigo")){
            Vida-=1;
+           if(Vida==0){
+            Muerte();
+           }
         }
 
 
+    }
+
+    private void Muerte(){
+      Vida=0;
+      AudioSource.PlayClipAtPoint(audiomuerte,transform.position);
+      sprite.enabled=false;
+      //SceneManager.LoadScene("GameOver");
     }
 }
