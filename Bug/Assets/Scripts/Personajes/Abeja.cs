@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class Abeja : Enemigos
 {
-
+  private float estadoInicial;
+  private bool subir;
+  private float constante;
 
     // Start is called before the first frame update
     void Start()
     {
-
+      estadoInicial=3;
+      subir=true;
+      constante=0.05f;
     }
 
     // Update is called once per frame
@@ -17,6 +21,7 @@ public class Abeja : Enemigos
     {
       //animador.SetBool("atacando",false);
       animador.SetBool("golpeada",false);
+
 
       if (Input.GetKey(KeyCode.G)) {
             sprite.flipX=true;
@@ -41,8 +46,40 @@ public class Abeja : Enemigos
        }
     }
 
+    //Invoke("Atacar",0.5f);
+
+    void FixedUpdate(){
+     Rigidbody rb=GetComponent<Rigidbody>();
+     rb.velocity=new Vector3(rb.velocity.x,velocidadHorizontal,rb.velocity.z);
+    }
+
+    public void OnTriggerEnter(Collider col){
+
+      if(col.CompareTag("muro invisible")){
+       velocidadHorizontal *=-1;
+     }
+
+    }
+
     public override void Atacar(){
-        Debug.Log("pum, le pego");
+     /*if(subir==true){
+      if((estadoInicial-3<transform.position.y) && (transform.position.y<estadoInicial+3)){
+        transform.Translate(0f,constante * velocidadHorizontal,0f);
+        //constante+=0.05f;
+      }
+      subir=false;
+      //constante=0.05f;
+     }
+     else{
+     if(subir==false){
+      if(estadoInicial-3.0f<transform.position.y ){
+         transform.Translate(0f,-constante * velocidadHorizontal,0f);
+         //constante+=0.05f;
+      }
+      subir=true;
+      //constante=0.05f;
+     }
+     }*/
     }
 
     private void OnCollisionEnter(Collision col){

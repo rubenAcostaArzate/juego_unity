@@ -9,6 +9,7 @@ TagManager:
   - terreno
   - volar
   - escudo
+  - muro invisible
   layers:
   - Default
   - TransparentFX
