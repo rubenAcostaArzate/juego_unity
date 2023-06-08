@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 public class Jugador : MonoBehaviour
 {
     private Rigidbody _rb;
+
+    public Transform deteccionSuelo;
+
+    public LayerMask capaDeteccionSuelo;
     
     public int Vida = 3;
 
@@ -63,10 +67,12 @@ public class Jugador : MonoBehaviour
         animador.SetBool("hormonas",false);
         animador.SetBool("llamada",false);
 
-        if(Vida==0){
-
-
-        }
+        /*if (Physics.SphereCast(deteccionSuelo.position, 0.1f, Vector3.down, out RaycastHit hit,
+                0.1f, capaDeteccionSuelo)) {
+            enPiso = true;
+        } else {
+            enPiso = false;
+        }*/
 
         if (Input.GetKeyDown(KeyCode.Space)) {
 
@@ -76,20 +82,20 @@ public class Jugador : MonoBehaviour
         } else if (Input.GetKey(KeyCode.A)) {
             sprite.flipX=true;
             animador.SetBool("se_mueve",true);
-            transform.Translate(-0.1f * velocidadHorizontal,0f,0f);
+            _rb.velocity=new Vector3(-velocidadHorizontal,_rb.velocity.y,0);
 
         } else if (Input.GetKey(KeyCode.D)) {
             sprite.flipX=false;
             animador.SetBool("se_mueve",true);
-            transform.Translate(0.1f * velocidadHorizontal,0f,0f);
+            _rb.velocity=new Vector3(velocidadHorizontal,_rb.velocity.y,0);
 
         } else if (Input.GetKey(KeyCode.W)){
             animador.SetBool("se_mueve",true);
-            transform.Translate(0f,0f,0.1f * velocidadHorizontal);
+            _rb.velocity=new Vector3(0,_rb.velocity.y,velocidadHorizontal);
 
         }else if (Input.GetKey(KeyCode.S)) {
             animador.SetBool("se_mueve",true);
-            transform.Translate(0f,0f,-0.1f * velocidadHorizontal);
+             _rb.velocity=new Vector3(0,_rb.velocity.y,-velocidadHorizontal);
 
         }else if (Input.GetKey(KeyCode.E)) {
             animador.SetBool("escudo",true);
@@ -102,6 +108,9 @@ public class Jugador : MonoBehaviour
 
         }
 
+        if(enPiso==true){
+          saltoActual=0;
+        }
 
         if(DobleSaltoDisponible == true){
             saltoMax = 2;
@@ -134,8 +143,10 @@ public class Jugador : MonoBehaviour
         if (saltoActual < saltoMax ){
             if (saltoActual == 1){
                 animador.SetBool("segundo_salto",true);
+
             }
             AudioSource.PlayClipAtPoint(audiosalto,transform.position);
+            _rb.velocity = new Vector3(_rb.velocity.x, 0, _rb.velocity.z);
             _rb.AddForce(Vector3.up * velocidadSaltoInicial);
             enPiso = false;
             saltoActual += 1;
@@ -143,6 +154,7 @@ public class Jugador : MonoBehaviour
      }else{
        if (saltoActual < 1){
            AudioSource.PlayClipAtPoint(audiosalto,transform.position);
+           _rb.velocity = new Vector3(_rb.velocity.x, 0, _rb.velocity.z);
           _rb.AddForce(Vector3.up * velocidadSaltoInicial);
            enPiso = false;
            saltoActual += 1;
@@ -153,9 +165,9 @@ public class Jugador : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        enPiso = true;
-        saltoActual = 0;
-        animador.SetBool("segundo_salto",false); 
+        //enPiso = true;
+        //saltoActual = 0;
+        //animador.SetBool("segundo_salto",false);
 
 
     }
@@ -182,6 +194,12 @@ public class Jugador : MonoBehaviour
            if(Vida==0){
             Muerte();
            }
+        }
+
+        if(col.gameObject.CompareTag("terreno")){
+           enPiso=true;
+           saltoActual = 0;
+           animador.SetBool("segundo_salto",false);
         }
 
 
