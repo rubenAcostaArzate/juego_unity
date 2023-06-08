@@ -98,7 +98,8 @@ public class Jugador : MonoBehaviour
              _rb.velocity=new Vector3(0,_rb.velocity.y,-velocidadHorizontal);
 
         }else if (Input.GetKey(KeyCode.E)) {
-            animador.SetBool("escudo",true);
+                Escudar();
+
 
         }else if (Input.GetKey(KeyCode.Q)) {
             animador.SetBool("hormonas", true);
@@ -135,6 +136,12 @@ public class Jugador : MonoBehaviour
 
     public bool getHormonas(){
       return HormonasDisponible;
+    }
+
+    public void Escudar(){
+      if(EscudoDisponible) {
+          animador.SetBool("escudo",true);
+      }
     }
 
     public void Saltar()

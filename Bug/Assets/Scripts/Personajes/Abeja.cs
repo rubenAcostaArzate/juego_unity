@@ -20,7 +20,7 @@ public class Abeja : Enemigos
     void Update()
     {
       //animador.SetBool("atacando",false);
-      animador.SetBool("golpeada",false);
+
 
 
       if (Input.GetKey(KeyCode.G)) {
@@ -51,6 +51,7 @@ public class Abeja : Enemigos
     void FixedUpdate(){
      Rigidbody rb=GetComponent<Rigidbody>();
      rb.velocity=new Vector3(rb.velocity.x,velocidadHorizontal,rb.velocity.z);
+
     }
 
     public void OnTriggerEnter(Collider col){
@@ -84,8 +85,13 @@ public class Abeja : Enemigos
 
     private void OnCollisionEnter(Collision col){
         if(col.gameObject.CompareTag("Player")){
-            animador.SetBool("golpeada",true);
+            animador.SetBool("atacando",true);
+            Invoke("normalize",2);
         }
+    }
+
+    public void normalize(){
+      animador.SetBool("atacando",false);
     }
 
 }

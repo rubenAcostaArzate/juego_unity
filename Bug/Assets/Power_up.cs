@@ -5,6 +5,8 @@ using UnityEngine;
 public class Power_up : MonoBehaviour
 {
     private SpriteRenderer sprite;
+
+    public GameObject power;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,7 @@ public class Power_up : MonoBehaviour
     private void OnCollisionEnter(Collision col){
         if(col.gameObject.CompareTag("Player")){
           sprite.enabled=false;
+          Destroy(power);
         }
 
 

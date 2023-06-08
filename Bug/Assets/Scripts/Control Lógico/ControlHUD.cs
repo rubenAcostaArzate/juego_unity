@@ -50,10 +50,11 @@ public class ControlHUD : MonoBehaviour
            Vida3.enabled=false;
         }
 
-        if(carlita.getEscudo()==false){
-          Escudo.enabled=false;
-          Barra_escudo.enabled=false;
-        }
+        Escudo.enabled=carlita.getEscudo();
+
+        Habilidad1.enabled=carlita.getLlamada();
+
+        Habilidad2.enabled=carlita.getHormonas();
 
         Habilidad3.enabled=carlita.getDobleSalto();
 
