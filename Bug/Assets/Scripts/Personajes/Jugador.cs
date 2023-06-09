@@ -61,6 +61,11 @@ public class Jugador : MonoBehaviour
     // Update is called once per frame
     void Update() {
 
+
+    }
+
+    void FixedUpdate(){
+
         animador.SetBool("se_mueve",false);
         animador.SetBool("escudo", false);
         animador.SetBool("en_piso",enPiso);
@@ -116,6 +121,7 @@ public class Jugador : MonoBehaviour
         if(DobleSaltoDisponible == true){
             saltoMax = 2;
         }
+
     }
 
     public int getVida(){
