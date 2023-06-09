@@ -49,6 +49,8 @@ public class Jugador : MonoBehaviour
 
     public AudioClip audiohabilidad;
 
+    public AudioClip audiodaño;
+
 
     // Start is called before the first frame update
     void Start() {
@@ -208,6 +210,7 @@ public class Jugador : MonoBehaviour
 
         if(col.gameObject.CompareTag("enemigo")){
            Vida-=1;
+           AudioSource.PlayClipAtPoint(audiodaño,transform.position);
            if(Vida==0){
             Muerte();
            }
