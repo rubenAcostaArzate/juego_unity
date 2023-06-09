@@ -10,6 +10,7 @@ TagManager:
   - volar
   - escudo
   - muro invisible
+  - corona
   layers:
   - Default
   - TransparentFX

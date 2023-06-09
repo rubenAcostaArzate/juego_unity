@@ -10,7 +10,7 @@ public class Jugador : MonoBehaviour
     public Transform deteccionSuelo;
 
     public LayerMask capaDeteccionSuelo;
-    
+
     public int Vida = 3;
 
     private int Olor;
@@ -40,7 +40,7 @@ public class Jugador : MonoBehaviour
     private SpriteRenderer sprite;
 
     public int saltoMax = 1;
-    
+
     public int saltoActual = 0;
 
     public AudioClip audiosalto;
@@ -186,14 +186,18 @@ public class Jugador : MonoBehaviour
 
         if(col.gameObject.CompareTag("volar")){
             DobleSaltoDisponible=true;
-            AudioSource.PlayClipAtPoint(audiohabilidad,transform.position);
-            SceneManager.LoadScene("Zona2.5");
+            //AudioSource.PlayClipAtPoint(audiohabilidad,transform.position);
+            SceneManager.LoadScene("SegundoSalto");
         }
 
         if(col.gameObject.CompareTag("escudo")){
             EscudoDisponible=true;
-            AudioSource.PlayClipAtPoint(audiohabilidad,transform.position);
-            SceneManager.LoadScene("Lo lograste");
+            //AudioSource.PlayClipAtPoint(audiohabilidad,transform.position);
+            //SceneManager.LoadScene("Lo lograste");
+        }
+
+        if(col.gameObject.CompareTag("corona")){
+            SceneManager.LoadScene("Victoria");
         }
 
         if(col.gameObject.CompareTag("enemigo")){
