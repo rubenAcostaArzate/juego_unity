@@ -349,7 +349,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2419551965163948520, guid: 43036498965bf4608a46e8ea982d8689, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.82
+      value: 14.09
       objectReference: {fileID: 0}
     - target: {fileID: 2419551965163948520, guid: 43036498965bf4608a46e8ea982d8689, type: 3}
       propertyPath: m_LocalPosition.y
@@ -357,7 +357,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2419551965163948520, guid: 43036498965bf4608a46e8ea982d8689, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 38.1
+      value: 40.67
       objectReference: {fileID: 0}
     - target: {fileID: 2419551965163948520, guid: 43036498965bf4608a46e8ea982d8689, type: 3}
       propertyPath: m_LocalRotation.w
@@ -429,11 +429,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2419551965163948522, guid: 43036498965bf4608a46e8ea982d8689, type: 3}
       propertyPath: velocidadHorizontal
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2419551965163948522, guid: 43036498965bf4608a46e8ea982d8689, type: 3}
       propertyPath: capaDeteccionSuelo.m_Bits
-      value: 128
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2419551965163948524, guid: 43036498965bf4608a46e8ea982d8689, type: 3}
       propertyPath: m_Name
@@ -485,7 +485,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2419551965163948567, guid: 43036498965bf4608a46e8ea982d8689, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2419551965163948567, guid: 43036498965bf4608a46e8ea982d8689, type: 3}
       propertyPath: m_Center.x
@@ -501,40 +501,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2419551965163948564, guid: 43036498965bf4608a46e8ea982d8689, type: 3}
+    - {fileID: 2419551965163948567, guid: 43036498965bf4608a46e8ea982d8689, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 43036498965bf4608a46e8ea982d8689, type: 3}
 --- !u!1 &446112880 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2419551964711419629, guid: 43036498965bf4608a46e8ea982d8689, type: 3}
   m_PrefabInstance: {fileID: 446112878}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &446112881
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 446112880}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3f2ac41cc0824a4cbafb7230184dc50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deteccionSuelo: {fileID: 0}
-  capaDeteccionSuelo:
-    serializedVersion: 2
-    m_Bits: 0
-  Vida: 3
-  DobleSaltoDisponible: 0
-  velocidadSaltoInicial: 500
-  velocidadHorizontal: 1
-  enPiso: 0
-  enemigo: 1
-  saltoMax: 2
-  saltoActual: 0
-  audiosalto: {fileID: 8300000, guid: 7ffea66051f446547a716303e3e247a9, type: 3}
-  audiomuerte: {fileID: 8300000, guid: ffc35a7235e66ed46ace4bc2f2bc447d, type: 3}
-  audiohabilidad: {fileID: 8300000, guid: 87ca2308ca5eb0bc48e1b39b763c832f, type: 3}
-  "audioda\xF1o": {fileID: 0}
 --- !u!114 &446112882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -550,32 +523,6 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
---- !u!65 &446112883
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 446112880}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 1.642, y: 3.342, z: 1.255}
-  m_Center: {x: 0.345, y: 0.489, z: 0.018}
---- !u!65 &446112884
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 446112880}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 1.642, y: 0.284, z: 1.098}
-  m_Center: {x: 0.345, y: -1.085, z: 0.018}
 --- !u!114 &517780409 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2762201906195595802, guid: 13645c68bb4d64a1991cc2f005207a53, type: 3}
@@ -824,7 +771,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 417901718}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b3fe4cc4d7720b67c9b59c8fe83f555e, type: 3}
@@ -837,7 +784,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.6974602
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -913,6 +860,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!136 &923568438
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417901718}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.750253
+  m_Height: 4.821602
+  m_Direction: 1
+  m_Center: {x: -1.412669, y: 1.3714243, z: 3.5712113}
 --- !u!1 &977462736
 GameObject:
   m_ObjectHideFlags: 0
@@ -1622,7 +1583,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1921471441}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.4, y: 0.37, z: 21.3}
+  m_LocalPosition: {x: -6.4, y: 0.3, z: 21.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
