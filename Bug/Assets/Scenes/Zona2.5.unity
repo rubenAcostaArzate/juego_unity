@@ -1510,6 +1510,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: ffc35a7235e66ed46ace4bc2f2bc447d, type: 3}
     - target: {fileID: 2419551965163948522, guid: 43036498965bf4608a46e8ea982d8689, type: 3}
+      propertyPath: nivel_actual
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2419551965163948522, guid: 43036498965bf4608a46e8ea982d8689, type: 3}
       propertyPath: audiohabilidad
       value: 
       objectReference: {fileID: 8300000, guid: 87ca2308ca5eb0bc48e1b39b763c832f, type: 3}
@@ -1739,6 +1743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3f2ac41cc0824a4cbafb7230184dc50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nivel_actual: 0
   deteccionSuelo: {fileID: 1925015954}
   capaDeteccionSuelo:
     serializedVersion: 2

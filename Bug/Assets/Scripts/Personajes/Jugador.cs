@@ -7,6 +7,8 @@ public class Jugador : MonoBehaviour
 {
     private Rigidbody _rb;
 
+    public int nivel_actual;
+
     public Transform deteccionSuelo;
 
     public LayerMask capaDeteccionSuelo;
@@ -146,6 +148,10 @@ public class Jugador : MonoBehaviour
       return HormonasDisponible;
     }
 
+    public int getNivel(){
+      return nivel_actual;
+    }
+
     public void Escudar(){
       if(EscudoDisponible) {
           animador.SetBool("escudo",true);
@@ -194,12 +200,14 @@ public class Jugador : MonoBehaviour
 
         if(col.gameObject.CompareTag("volar")){
             DobleSaltoDisponible=true;
+            nivel_actual=2;
             //AudioSource.PlayClipAtPoint(audiohabilidad,transform.position);
             SceneManager.LoadScene("SegundoSalto");
         }
 
         if(col.gameObject.CompareTag("escudo")){
             EscudoDisponible=true;
+            nivel_actual=3;
             //AudioSource.PlayClipAtPoint(audiohabilidad,transform.position);
             //SceneManager.LoadScene("Lo lograste");
         }
@@ -229,6 +237,15 @@ public class Jugador : MonoBehaviour
       Vida=0;
       //AudioSource.PlayClipAtPoint(audiomuerte,transform.position);
       sprite.enabled=false;
-      SceneManager.LoadScene("GameOver");
+      if(nivel_actual==1){
+        SceneManager.LoadScene("GameOver");
+      }
+      if(nivel_actual==2){
+        SceneManager.LoadScene("GameOver2");
+      }
+
+      if(nivel_actual==3){
+        SceneManager.LoadScene("GameOver3");
+      }
     }
 }

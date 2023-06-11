@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Historia.unity
     guid: c379d3b575b734bc19cebdd6086eec1f
   - enabled: 1
+    path: Assets/Scenes/GameOver2.unity
+    guid: 5e0476b9ec2a47595b4a7965450d3c90
+  - enabled: 1
     path: Assets/Scenes/Habilidades.unity
     guid: daedd85e6cc9a433fb72d39d0749c108
   - enabled: 1
