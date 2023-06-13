@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Planta : Enemigos
 {
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,10 +15,10 @@ public class Planta : Enemigos
     void Update()
     {
        //animador.SetBool("atacando",false);
-      animador.SetBool("atacando",false);
-      if(Input.GetKey(KeyCode.M)){
-          animador.SetBool("atacando",true);
-       }
+      //animador.SetBool("atacando",false);
+
+      animador.SetBool("Atacando",true);
+
     }
 
      public override void Atacar(){

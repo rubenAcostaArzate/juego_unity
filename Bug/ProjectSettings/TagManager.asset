@@ -11,6 +11,7 @@ TagManager:
   - escudo
   - muro invisible
   - corona
+  - muro invisible2
   layers:
   - Default
   - TransparentFX
