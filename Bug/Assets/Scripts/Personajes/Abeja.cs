@@ -7,6 +7,7 @@ public class Abeja : Enemigos
   private float estadoInicial;
   private bool subir;
   private float constante;
+  public Jugador Carlita;
 
     // Start is called before the first frame update
     void Start()
@@ -50,6 +51,9 @@ public class Abeja : Enemigos
 
     void FixedUpdate(){
      Rigidbody rb=GetComponent<Rigidbody>();
+     if(Carlita.estaActivadoE()){
+        rb.velocity=new Vector3(rb.velocity.x,0,rb.velocity.z);
+     }else
      rb.velocity=new Vector3(rb.velocity.x,velocidadHorizontal,rb.velocity.z);
 
     }

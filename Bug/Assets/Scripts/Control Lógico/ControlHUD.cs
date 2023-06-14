@@ -51,7 +51,9 @@ public class ControlHUD : MonoBehaviour
         }
 
         Escudo.enabled=carlita.getEscudo();
-        Barra_escudo.enabled=carlita.getEscudo();
+        if(carlita.getEscudo() && carlita.estaActivadoE()){
+         Barra_escudo.enabled=true;
+        }else Barra_escudo.enabled=false;
 
         Habilidad1.enabled=carlita.getLlamada();
 

@@ -17,7 +17,7 @@ public class Jugador : MonoBehaviour
 
     private int Olor;
 
-    private bool EscudoDisponible = false;
+    public bool EscudoDisponible = false;
 
     private bool LlamadoDisponible = false;
 
@@ -52,6 +52,8 @@ public class Jugador : MonoBehaviour
     public AudioClip audiohabilidad;
 
     public AudioClip audiodaño;
+
+    public bool escudo_activado;
 
 
     // Start is called before the first frame update
@@ -108,14 +110,6 @@ public class Jugador : MonoBehaviour
 
         }else if (Input.GetKey(KeyCode.E)) {
                 Escudar();
-
-
-        }else if (Input.GetKey(KeyCode.Q)) {
-            animador.SetBool("hormonas", true);
-
-        }else if (Input.GetKey(KeyCode.R)) {
-            animador.SetBool("llamada", true);
-
         }
 
         if(enPiso==true){
@@ -154,8 +148,18 @@ public class Jugador : MonoBehaviour
 
     public void Escudar(){
       if(EscudoDisponible) {
+          escudo_activado=true;
           animador.SetBool("escudo",true);
+          Invoke("desactivarEscudo",3);
       }
+    }
+
+    public bool estaActivadoE(){
+      return escudo_activado;
+    }
+
+    public void desactivarEscudo(){
+      escudo_activado=false;
     }
 
     public void Saltar()
