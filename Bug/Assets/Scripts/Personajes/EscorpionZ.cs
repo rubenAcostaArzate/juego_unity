@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Escorpion : Enemigos
+public class EscorpionZ : Enemigos
 {
     private float estadoInicial;
     private bool subir;
     private float constante;
-    private float tiempo;
 
     // Start is called before the first frame update
     void Start()
@@ -15,7 +14,6 @@ public class Escorpion : Enemigos
       estadoInicial=3;
       subir=true;
       constante=0.05f;
-      tiempo = 0;
     }
 
     // Update is called once per frame
@@ -50,19 +48,26 @@ public class Escorpion : Enemigos
     }
 
     void FixedUpdate(){
-      tiempo += Time.deltaTime;
+      if(animador.GetBool("atacando") == false){
+        transform.Translate(0.05f * velocidadHorizontal,0f,-0.05f * velocidadHorizontal);
+        animador.SetBool("movimiento", true);
+      }
+    }
 
-      if (tiempo >= 2f) {
-	  sprite.flipX = !sprite.flipX;
-        tiempo = 0f;
-    }
-    }
+    public void OnTriggerEnter(Collider col){
+
+      if(col.CompareTag("muro invisible")){
+        velocidadHorizontal *=-1;
+      }
+    } 
     
     private void OnCollisionEnter(Collision col){
         if(col.gameObject.CompareTag("Player") && col.gameObject.GetComponentInChildren<Animator>().GetBool("escudo") == false){
 	    animador.SetBool("movimiento",false);
             animador.SetBool("atacando",true);
-        }
+        }else if(col.gameObject.GetComponentInChildren<Animator>().GetBool("escudo") == true){
+        velocidadHorizontal *=-1;
+      }
     }
 
     public void normalize(){
