@@ -1287,8 +1287,9 @@ GameObject:
   - component: {fileID: 637328952}
   - component: {fileID: 637328951}
   - component: {fileID: 637328950}
-  - component: {fileID: 637328949}
   - component: {fileID: 637328953}
+  - component: {fileID: 637328954}
+  - component: {fileID: 637328955}
   m_Layer: 7
   m_Name: punte
   m_TagString: terreno
@@ -1296,19 +1297,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &637328949
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 637328948}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &637328950
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1390,6 +1378,33 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 112
   m_CollisionDetection: 1
+--- !u!136 &637328954
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637328948}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  m_Radius: 0.20099801
+  m_Height: 1.0396967
+  m_Direction: 2
+  m_Center: {x: 0.0812323, y: 0.13745898, z: 0.013734434}
+--- !u!65 &637328955
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637328948}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &674665925
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3063,8 +3078,9 @@ GameObject:
   - component: {fileID: 1633656109}
   - component: {fileID: 1633656108}
   - component: {fileID: 1633656107}
-  - component: {fileID: 1633656106}
   - component: {fileID: 1633656105}
+  - component: {fileID: 1633656110}
+  - component: {fileID: 1633656111}
   m_Layer: 7
   m_Name: punte (1)
   m_TagString: terreno
@@ -3088,19 +3104,6 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 112
   m_CollisionDetection: 1
---- !u!65 &1633656106
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1633656104}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1633656107
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3159,13 +3162,40 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1633656104}
   m_LocalRotation: {x: 0, y: 0.707816, z: 0, w: 0.7063969}
-  m_LocalPosition: {x: -3.772, y: 0.5, z: 9.195}
+  m_LocalPosition: {x: -3.772, y: 0.36689, z: 9.195}
   m_LocalScale: {x: 1, y: 0.25, z: 3.3388267}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 90.115, z: 0}
+--- !u!136 &1633656110
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633656104}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  m_Radius: 0.30406937
+  m_Height: 1.0556518
+  m_Direction: 2
+  m_Center: {x: -0.06367695, y: 0.4425609, z: -0.007255614}
+--- !u!65 &1633656111
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633656104}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000001, y: 1, z: 1.0000001}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1761830692 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2762201907068567878, guid: 13645c68bb4d64a1991cc2f005207a53, type: 3}
