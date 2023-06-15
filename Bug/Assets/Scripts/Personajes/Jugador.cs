@@ -213,7 +213,7 @@ public class Jugador : MonoBehaviour
             EscudoDisponible=true;
             nivel_actual=3;
             //AudioSource.PlayClipAtPoint(audiohabilidad,transform.position);
-            //SceneManager.LoadScene("Lo lograste");
+            SceneManager.LoadScene("Cuevas");
         }
 
         if(col.gameObject.CompareTag("corona")){
