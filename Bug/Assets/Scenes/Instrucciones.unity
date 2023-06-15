@@ -217,7 +217,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Zona1
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &271835484
@@ -660,7 +660,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -501, y: -0.0000038146973}
+  m_AnchoredPosition: {x: -501, y: 33}
   m_SizeDelta: {x: 780.55273, y: 139.8791}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &884878266
@@ -906,8 +906,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -411, y: 186.76}
-  m_SizeDelta: {x: 231.6467, y: 292.928}
+  m_AnchoredPosition: {x: -420.55078, y: 247.10352}
+  m_SizeDelta: {x: 250.76953, y: 353.4834}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1259688903
 MonoBehaviour:
@@ -1066,8 +1066,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 413, y: 186.76}
-  m_SizeDelta: {x: 227.0644, y: 321.88}
+  m_AnchoredPosition: {x: 402, y: 236}
+  m_SizeDelta: {x: 255.74841, y: 420.358}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1733934736
 MonoBehaviour:
@@ -1158,7 +1158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 0.59
+  m_ScaleFactor: 0.58
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0

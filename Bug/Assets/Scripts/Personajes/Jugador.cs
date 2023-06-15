@@ -148,9 +148,9 @@ public class Jugador : MonoBehaviour
 
     public void Escudar(){
       if(EscudoDisponible) {
-          escudo_activado=true;
+          //escudo_activado=true;
           animador.SetBool("escudo",true);
-          Invoke("desactivarEscudo",3);
+          //Invoke("desactivarEscudo",3);
       }
     }
 
@@ -227,6 +227,13 @@ public class Jugador : MonoBehaviour
             Muerte();
            }
         }
+
+        if(col.gameObject.CompareTag("escorpion") && animador.GetBool("escudo") == false){
+           Vida = 0;
+           AudioSource.PlayClipAtPoint(audiodaño,transform.position);
+           Muerte();
+        }
+
 
         if(col.gameObject.CompareTag("terreno")){
            enPiso=true;
