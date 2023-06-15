@@ -1649,7 +1649,7 @@ PrefabInstance:
     - target: {fileID: 2419551965163948522, guid: 43036498965bf4608a46e8ea982d8689, type: 3}
       propertyPath: audiosalto
       value: 
-      objectReference: {fileID: 8300000, guid: 7ffea66051f446547a716303e3e247a9, type: 3}
+      objectReference: {fileID: 8300000, guid: ca2078286f83cf5408550bad1a17eeca, type: 3}
     - target: {fileID: 2419551965163948522, guid: 43036498965bf4608a46e8ea982d8689, type: 3}
       propertyPath: audiomuerte
       value: 
@@ -1911,6 +1911,7 @@ MonoBehaviour:
   audiohabilidad: {fileID: 8300000, guid: 87ca2308ca5eb0bc48e1b39b763c832f, type: 3}
   "audioda\xF1o": {fileID: 0}
   escudo_activado: 0
+  muerto: 0
 --- !u!65 &674665933
 BoxCollider:
   m_ObjectHideFlags: 0
