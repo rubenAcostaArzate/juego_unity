@@ -18,17 +18,5 @@ public class time : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(tiempo>0){
-            tiempo-=(int)Time.deltaTime;
-            texto.text=""+tiempo;
-        }
-
-        if(tiempo<=0){
-          mario.GetComponent<MovForceAnim>().vida=0;
-          Destroy(mario);
-        }
-    }
+   
 }
