@@ -1569,7 +1569,7 @@ PrefabInstance:
     - target: {fileID: 2419551964711419626, guid: 43036498965bf4608a46e8ea982d8689, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1624910100, guid: 56207d1d62e8d433ba98b449a99184af, type: 3}
+      objectReference: {fileID: -1945185927, guid: 56207d1d62e8d433ba98b449a99184af, type: 3}
     - target: {fileID: 2419551964711419629, guid: 43036498965bf4608a46e8ea982d8689, type: 3}
       propertyPath: m_TagString
       value: Player
@@ -1668,7 +1668,7 @@ PrefabInstance:
       objectReference: {fileID: 1925015954}
     - target: {fileID: 2419551965163948522, guid: 43036498965bf4608a46e8ea982d8689, type: 3}
       propertyPath: EscudoDisponible
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2419551965163948522, guid: 43036498965bf4608a46e8ea982d8689, type: 3}
       propertyPath: velocidadHorizontal

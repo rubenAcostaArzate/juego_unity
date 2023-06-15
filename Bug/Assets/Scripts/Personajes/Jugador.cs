@@ -55,6 +55,8 @@ public class Jugador : MonoBehaviour
 
     public bool escudo_activado;
 
+    public bool muerto;
+
 
     // Start is called before the first frame update
     void Start() {
@@ -84,7 +86,7 @@ public class Jugador : MonoBehaviour
         } else {
             enPiso = false;
         }*/
-
+       if(muerto==false){
         if (Input.GetKeyDown(KeyCode.Space)) {
 
             //fuenteAudio.PlayOneShot(audiosalto);
@@ -119,6 +121,7 @@ public class Jugador : MonoBehaviour
         if(DobleSaltoDisponible == true){
             saltoMax = 2;
         }
+       }
 
     }
 
@@ -231,7 +234,8 @@ public class Jugador : MonoBehaviour
         if(col.gameObject.CompareTag("escorpion") && animador.GetBool("escudo") == false){
            Vida = 0;
            AudioSource.PlayClipAtPoint(audiodaño,transform.position);
-           Muerte();
+           muerto=true;
+           Invoke("Muerte",2);
         }
 
 
