@@ -7,6 +7,7 @@ public class EscorpionX : Enemigos
     private float estadoInicial;
     private bool subir;
     private float constante;
+    private bool muro;
 
     // Start is called before the first frame update
     void Start()
@@ -47,9 +48,10 @@ public class EscorpionX : Enemigos
        }
     }
 
+
     void FixedUpdate(){
-      if(animador.GetBool("atacando") == false){
-        transform.Translate(-0.05f * velocidadHorizontal,0f,-0.05f * velocidadHorizontal);
+      if(animador.GetBool("atacando") == false && muro==false){
+        transform.Translate(0.05f * velocidadHorizontal,0f,-0.05f * velocidadHorizontal);
         animador.SetBool("movimiento", true);
       }
     }
@@ -57,10 +59,19 @@ public class EscorpionX : Enemigos
     public void OnTriggerEnter(Collider col){
 
       if(col.CompareTag("muro invisible")){
-        velocidadHorizontal *=-1;
-        sprite.flipX = !sprite.flipX;
+        muro=true;
+        transform.Translate(0.05f * 0,0f,-0.05f *0);
+        Invoke("cambioDeDireccion",2);
+        //velocidadHorizontal *=-1;
       }
     } 
+
+    private void cambioDeDireccion(){
+      muro=false;
+      transform.Translate(0.05f * velocidadHorizontal,0f,-0.05f * velocidadHorizontal);
+      velocidadHorizontal *=-1;
+    }
+
     
     private void OnCollisionEnter(Collision col){
         if(col.gameObject.CompareTag("Player") && col.gameObject.GetComponentInChildren<Animator>().GetBool("escudo") == false){
