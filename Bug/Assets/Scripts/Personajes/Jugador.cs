@@ -58,6 +58,7 @@ public class Jugador : MonoBehaviour
     public bool muerto;
 
 
+
     // Start is called before the first frame update
     void Start() {
         _rb = GetComponent<Rigidbody>();
@@ -216,7 +217,7 @@ public class Jugador : MonoBehaviour
             EscudoDisponible=true;
             nivel_actual=3;
             //AudioSource.PlayClipAtPoint(audiohabilidad,transform.position);
-            SceneManager.LoadScene("Cuevas");
+            SceneManager.LoadScene("Escudo");
         }
 
         if(col.gameObject.CompareTag("corona")){

@@ -41,4 +41,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameOver3.unity
     guid: a7f6febe2d23c5186b94d590a44ad92e
+  - enabled: 1
+    path: Assets/Scenes/Escudo.unity
+    guid: 4d9d83ace4cad4ad39f693cea846e66c
   m_configObjects: {}
